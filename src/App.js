@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState} from 'react';
+
+import Header from './components/Header';
+import Footer from './components/Footer';
+import ContactForm from './components/ContactForm'
+
+
+
 
 function App() {
+
+  const [categories] = useState([
+    {
+      name: 'commercial',
+      description: 'Photos of grocery stores, food trucks, and other commercial projects',
+    },
+    { name: 'portraits', description: 'Portraits of people in my life' },
+    { name: 'food', description: 'Delicious delicacies' },
+    { name: 'landscape', description: 'Fields, farmhouses, waterfalls, and the beauty of nature' },
+  ]);
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+
+      <Header />
+      <main>
+        <ContactForm />
+      </main>
+      <Footer />
+
     </div>
   );
 }
