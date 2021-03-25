@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import ContactForm from './components/ContactForm'
 import Portfolio from './components/Portfolio'
 import About from './components/About';
+import Resume from './components/Resume';
 
 
 
@@ -32,6 +33,7 @@ function App() {
         {(pageSelected === "about") && <About />}
         {(pageSelected === "portfolio") && <Portfolio />}
         {(pageSelected === "contact") && <ContactForm />}
+        {(pageSelected === "resume") && <Resume />}
       </main>
       <Footer />
 
