@@ -3,7 +3,19 @@ main {
 	margin: 0 auto;
 	max-width: 90%;
   padding: 50px 30px;
+  flex: 1 0 auto;
 }
+
+#root {
+  height: 100vh;
+}
+
+.App {
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
 :root {
   --primary: #8c54ff;
   --secondary: #F3A847;
@@ -24,7 +36,7 @@ main {
 
 html,
 body {
-  min-height: 100%;
+  min-height: 100vh;
 }
 
 body {
@@ -37,6 +49,7 @@ body {
   background: var(--dark);
   color: var(--light);
   font-family: 'Poiret One', cursive;
+  
 
 }
 
@@ -99,6 +112,10 @@ header a {
   color: var(--light);
 }
 
+
+.footer {
+  flex-shrink: 0;
+}
 button {
   font-size: 1rem;
   text-decoration: none;
