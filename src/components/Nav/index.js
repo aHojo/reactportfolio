@@ -1,23 +1,30 @@
 import React from 'react';
 
 
-const Nav = ({setPage}) => {
+const Nav = ({page, setPage}) => {
 
     return (
         <nav>
         <ul className="flex-row">
-          <li className="mx-2" onClick={() => setPage('about')}>
-            <a data-testid="about" href="#about">
+          <li className={page === 'about' ? "mx-2 navActive" : "mx-2"} 
+            onClick={() => setPage('about')}>
+            <span>
               About me
-            </a>
+            </span>
           </li>
-          <li className="mx-2" onClick={() => setPage('portfolio')}>
+          <li 
+            className={page === 'portfolio' ? "mx-2 navActive" : "mx-2"} 
+            onClick={() => setPage('portfolio')}>
             <span >Portfolio</span>
           </li>
-          <li className="mx-2" onClick={() => setPage('contact')}>
+          <li 
+            className={page === 'contact' ? "mx-2 navActive" : "mx-2"} 
+            onClick={() => setPage('contact')}>
             <span >Contact</span>
           </li>
-          <li className="mx-2" onClick={() => setPage('resume')}>
+          <li 
+            className={page === 'resume' ? "mx-2 navActive" : "mx-2"} 
+            onClick={() => setPage('resume')}>
             <span >Resume</span>
           </li>
         </ul>

@@ -2,13 +2,13 @@ import React from 'react';
 import Nav from '../Nav';
 
 
-const Header = ({setPage}) => {
+const Header = ({page, setPage}) => {
 
     return (
 
         <header className="flex-row px-1">
             <h1>Andrew</h1>
-            <Nav setPage={setPage} />
+            <Nav page={page} setPage={setPage} />
         </header>
     )
 }

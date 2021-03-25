@@ -27,7 +27,7 @@ function App() {
     <div className="App">
 
 
-      <Header setPage={setPageSelected} />
+      <Header page={pageSelected} setPage={setPageSelected} />
       <main>
         {(pageSelected === "about") && <About />}
         {(pageSelected === "portfolio") && <Portfolio />}
